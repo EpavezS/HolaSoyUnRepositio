@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>ELENAOBRAS</title>
+<link rel="icon" href="img/icon.png" type="image/jpeg">
 
 <style>
  body {
   font-family: Arial, sans-serif;
   background-image: url(img/lukacry.webp); /* ACA PUSE BACKGROUND Y ME SALIO LA OPCION DE B-IMAGE Y LA USÉ */
-  background-size: 90%;
+  background-size: 100%;
   margin-left: 0px;
   color: #464138;
   font-size: 20px;
@@ -32,40 +33,79 @@
  border-radius: 0;
  width: 100%;
  }
+ .abaje {
+ justify-content: center; /* Distribuye los elementos con espacio alrededor */
+ display: flex; /* Activa flexbox: organiza los hijos en fila */
+ flex-wrap: wrap;
+ gap: 20px;
+ background-color: rgba(102, 96, 80, 0.5);
+ padding: 10px; 
+ border-radius: 0;
+ width: 100%;
+ }
 
   /* Sección o bloque */
  .bloque {
   background-color: rgb(238, 236, 226);
   margin: 20px 0;
-  padding: 20px;
-  border-radius: 0;
+  padding: 15px;
   width: 200px;
   border: 1px solid rgb(78, 66, 57); /* Borde negro de 5px */
-  transition: 0.3s;
+  transition: 0.6s;
   }
 
- /* Imagen */
  .bloque img {
  width: 100%;
  height: auto;
  }
 
  .bloque:hover {
- padding: 15px; 
- border-radius: 0;
+ padding: 5px; 
  color: #998c6f;
+ width: 14%;
 }
 
 .bloque h6 { /* OMG ESTE TMB FUNCIONO*/
   margin: 5px 0;
 }
 
+.caja {
+ background-color: rgb(238, 236, 226);
+  margin: 20px 0;
+  padding: 20px;
+  width: 400px;
+  border: 1px solid rgb(78, 66, 57); /* Borde negro de 5px */
+  transition: 0.6s;
+}
+
+.caja img {
+ width: 100%;
+ height: auto;
+}
+
+.caja:hover {
+ padding: 5px; 
+ color: #998c6f;
+ width: 30%;
+}
+
+.caja h6 { /* OMG ESTE TMB FUNCIONO*/
+  margin: 5px 0;
+}
+
 /* MENU DE ARRIBA JEJE*/
 nav a {
- margin-left: 20px;
- text-decoration: none; /*este lo aprendí de la ia en una anterior pagina SISE OCUPARLE PORFE NO LO COPIE SOLAMENTE */
- color: #464138;
- }
+position: -webkit-sticky; /* Soporte para Safari */
+position: sticky;        /* La magia: actúa como bloque normal, pero se pega al llegar al tope */
+top: 0;                  /* Se pegará justo en el borde superior (0 píxeles) */
+width: 100%;
+padding: 15px;
+z-index: 1000;           /* Para que pase por encima de las imágenes al bajar */
+text-align: center;
+margin-left: 20px;
+text-decoration: none; /*este lo aprendí de la ia en una anterior pagina SISE OCUPARLE PORFE NO LO COPIE SOLAMENTE */
+color: #464138;
+}
 </style>
 
 <!-- Bloque ARRIBA DE LA PAGINA -->
@@ -103,7 +143,16 @@ nav a {
         <h4>Anticucho</h4>
         <h6>Fierro y madera</h6>
         </div>
-</div>
+ </div>
+
+ <div class="abaje">
+     <div class="caja">
+          <img src="img/cristoclose.jpg">
+          <h4>El cristo</h4>
+          <h6>Metal y Hojalata</h6>
+        </div>   
+ </div>
+
 <body>
 
 </body>
