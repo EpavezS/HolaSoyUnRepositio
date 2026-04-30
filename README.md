@@ -727,3 +727,15 @@ Idea:
 - 1 bloque grande
 - 2 medianos
 - 3 pequeños
+
+```
+hola esto es una declaracion
+```
+
+```
+
+
+
+
+
+
