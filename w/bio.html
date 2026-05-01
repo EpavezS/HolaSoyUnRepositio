@@ -7,62 +7,103 @@
 <style>
  body {
   font-family: Arial, sans-serif;
-  background-image: url(img/calvo.jpg);
-  background-size: 70%;
-  margin-left: 0px;
-  color: #464138;
-  font-size: 20px;
-  font-weight: bold;  
+  background-color: black;
+  background-size: 100%;
+  margin: 0;
+  font-weight: bold; 
   }
- .arriba {
- width: 100%;
- margin: 20px 0; 
- background-color: rgba(245, 244, 235, 0.8);
- }
+
+.arriba {
+   position: sticky;
+   top: 0;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.6);
+   backdrop-filter: blur(5px);
+   font-size: 40px; 
+   padding: 10px 0;
+   z-index: 1000;
+}
+
+/* LINKS */
+.arriba a {
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+  transition: 0.3s;
+  display: inline-block;
+}
 
 .abajo {
- background-color: rgba(187, 178, 152, 0.8);
+ background-color: rgba(187, 178, 152, 0);
  padding: 10px; 
  border-radius: 0;
  width: 20%;
  }
 
- .boton { 
-  justify-content: center;
+ .bloque {
   flex-wrap: wrap;
-  margin: 20px auto; /* ESTO lo centra */
-  background-color: rgb(70, 65, 56, 0.8); /* Color de fondo del botón Y SE BAJE LA OPASICDAD */
-  color: rgb(70, 65, 56); 
+  margin: 20px auto;
+  color: rgba(255, 255, 255, 0.03);
   padding: 20px 10px 20px 10px; 
-  width: 420px; 
-  text-align: center; /* Centra el texto horizontalmente */
+  width: 420px; /* Ancho fijo del botón */
+  text-align: left; /* Centra el texto horizontalmente */
   transition: 0.6s; /* Hace que los cambios (como color) sean suaves en 0.3 segundos */
+  font-size: 40px;
 }
 
-.boton:hover { /* Se activa cuando el mouse pasa sobre el elemento */
-  background-color: rgba(236, 230, 230, 0.9); /* Cambia el color de fondo al pasar el mouse */
-  color: #464138; /* Color del texto */
+.bloque:hover { /* Se activa cuando el mouse pasa sobre el elemento */
+  background-color: rgba(255, 255, 255, 0.6); /* Cambia el color de fondo al pasar el mouse */
+  color: #000000; /* Color del texto */
   padding: 20px; 
   width: 420px; /* Ancho fijo del botón */
-  text-align: center; /* Centra el texto horizontalmente */
-  border: 1px solid #eee8dc; /* Borde negro de 5px */
+  text-align: left; /* Centra el texto horizontalmente */
+}
+.bloque2 { 
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  color: rgb(255, 255, 255); 
+  padding: 20px 10px;
+  width: 30%;
+  text-align: center;
+  transition: 0.6s; 
 }
 
+.bloque2 img {
+ width: 80%;
+ height: auto; 
+ opacity: 0.4;
+}
+
+.bloque2:hover img { 
+ opacity: 1.0;
+ transition: 0.6s; 
+}
 nav a {
  margin-left: 20px;
- text-decoration: none; 
- color: #464138;
+ text-decoration: none;
+ color: #ffffff;
  }
-</style>
 
+</style>
 <body>
+
  <nav class="arriba">
+   <a></a>
     <a href="index.html">E|PAVEZ</a>
-    <a href="obras.html">ESCULTURAS</a>
-    <a href="bio.html">BIOGRAFÍA</a>
-    <a href="contacto.html">CONTACTO</a>
+    <a></a>
+    <a href="obras.html">OBRA</a>
+    <a href="bio.html">BIO</a>
+    <a href="contacto.html">CONTACT</a>
  </nav>
- <div class="boton">
-<h6>Elena Pavez es una estudiante de artes con especialidad en escultura. Realiza obras principalmente en metal. </h6>
 </div>
+ <div class="bloque">
+<h6>Elena Pavez, estudiante de artes con especialidad en escultura. Realiza obras principalmente en metal y soldadura. </h6>
+</div>
+
+<div class="bloque2">
+  <img src="img/tubos.jpg">
+  <h6>Tubos</h6>
+</div>
+
 </html>
